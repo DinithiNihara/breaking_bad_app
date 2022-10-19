@@ -1,12 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../App";
 
 export const Home = () => {
-  const { data } = useQuery(["character"], () => {
+  const { setCharacter } = useContext(AppContext);
+  let navigate = useNavigate();
+
+  const { data, isLoading, isError } = useQuery(["character"], () => {
     return Axios.get("https://breakingbadapi.com/api/characters").then(
       (res) => res.data
     );
   });
+
+  if (isLoading) {
+    return <h1>Loading...</h1>; //spinner
+  }
+
+  if (isError) {
+    return <h1>Oops!!! Something went wrong.</h1>;
+  }
+
   return (
     data && (
       <div>
@@ -26,9 +41,17 @@ export const Home = () => {
           his final on-screen appearances.
         </p>
 
-        {data.map((character) => (
+        {data.map((character, key) => (
           <>
-            <img src={character.img} style={{ height: "250px" }} />
+            <img
+              src={character.img}
+              style={{ height: "250px" }}
+              key={key}
+              onClick={() => {
+                setCharacter(character);
+                navigate(`/character/${character.char_id}`);
+              }}
+            />
             <p>{character.name}</p>
           </>
         ))}
