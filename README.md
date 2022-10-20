@@ -1,6 +1,39 @@
-# Getting Started with Create React App
+# Breaking Bad React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### (Software Engineering - Internship Assignment)
+
+This repository contains the code for the given assignment.
+
+The "Home" and "Character" pages are the two main pages of this app. The home page displays a grid of characters retrieved from the Breaking Bad API, which can be accessed via https://www.breakingbadapi.com/api/. When a user clicks on a character on the home page, they are directed to the character page. When users visit the character page, they can access the character details that were retrieved from the API.
+
+## Prerequisites
+
+Following applications are required to run the application.
+
+1. Node server v16.x.x
+2. Git
+
+## Instructions for Running the Application
+
+### Clone this repository
+
+Enter this command using git bash or cmd.
+
+```bash
+git clone https://github.com/
+cd mern-app
+```
+
+## Run the App in Terminal
+
+```bash
+# installing the dependencies
+npm install
+# starting the server
+npm start
+```
+
+Application will be loaded into the browser. If not navigate to http://localhost:3000.
 
 ## Available Scripts
 

@@ -1,3 +1,72 @@
+/* App.js - Styles */
+
 .App {
   text-align: center;
+  font-weight: 500;
+}
+
+/* Loading Spinner Styles*/
+
+.ringLoader {
+  margin: "0 auto";
+}
+
+/* Home.js - Page Styles */
+
+.title {
+  font-weight: bold;
+}
+
+.description {
+  font-size: 12px;
+}
+
+/* Character.js - Page Styles */
+
+.detailView {
+  padding: 30px;
+}
+
+.detailTitle {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.detailText {
+  padding-top: 200px;
+  text-align: left;
+}
+
+.detail {
+  font-weight: bold;
+}
+
+.backSymbol {
+  font-size: 70px;
+}
+
+.backSymbol:hover {
+  cursor: pointer;
+  color: #5a5a5a;
+}
+
+/* PageNotFound.js - Page Styles */
+
+.errorImage {
+  width: 700px;
+  height: 700px;
+  align-items: center;
+  justify-content: center;
+}
+
+.returnLink {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #97c101;
+  text-decoration: none;
+  color: #273238;
+}
+
+.returnLink:hover {
+  color: #ffffff;
 }
