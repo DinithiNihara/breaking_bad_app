@@ -20,8 +20,8 @@ Following applications are required to run the application.
 Enter this command using git bash or cmd.
 
 ```bash
-git clone https://github.com/
-cd mern-app
+git clone https://github.com/DinithiNihara/breaking_bad_app.git
+cd breaking_bad_app
 ```
 
 ## Run the App in Terminal
